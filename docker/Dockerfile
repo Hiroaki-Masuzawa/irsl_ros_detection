@@ -53,4 +53,4 @@ RUN pip install numpy==1.26.4
 RUN mkdir -p /catkin_ws/src/irsl_object_perception
 COPY . /catkin_ws/src/irsl_object_perception/
 RUN git clone https://github.com/Hiroaki-Masuzawa/irsl_ros_msgs.git -b add_instance_segmentation_msg  /catkin_ws/src/irsl_ros_msgs
-RUN bash -c "source /opt/ros/one/setup.bash && cd /catkin_ws && catkin build"
+RUN bash -c "source /opt/ros/one/setup.bash && cd /catkin_ws &&  catkin config --install && catkin build"
